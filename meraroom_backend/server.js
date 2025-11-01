@@ -25,7 +25,7 @@ const app = express();
 
 // Enable CORS - Allow both React frontend (localhost:3000) and any other needed origins
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://127.0.0.1:5500', 'http://127.0.0.1:3000'],
+    origin: ['http://localhost:3000', 'http://127.0.0.1:5500', 'http://127.0.0.1:3000', 'https://meraroom-frontend.vercel.app'],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true
 }));
