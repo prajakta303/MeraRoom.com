@@ -1,0 +1,297 @@
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.slide-in {
+    animation: slideIn 1s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.delay-2 {
+    animation-delay: 0.6s;
+}
+
+.delay-3 {
+    animation-delay: 0.9s;
+}
+
+.bounce {
+    animation: bounce 1s;
+}
+
+/* Hover Animations */
+.btn-hover-animate:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-hover-animate:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Rotate Animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate 2s linear infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+
+
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Add this for smoother button entry */
+  .btn-secondary {
+    animation: fadeInUp 0.6s ease both;
+  }
+  
+  /* --- Keyframe Animations --- */
+
+/* Used for Hero Content */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Used for general fade-ins like testimonials or scroll sections */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Optional: Use for elements sliding in from sides */
+  @keyframes slideInLeft {
+      from {
+          opacity: 0;
+          transform: translateX(-50px);
+      }
+      to {
+          opacity: 1;
+          transform: translateX(0);
+      }
+  }
+  
+  @keyframes slideInRight {
+      from {
+          opacity: 0;
+          transform: translateX(50px);
+      }
+      to {
+          opacity: 1;
+          transform: translateX(0);
+      }
+  }
+  
+  
+  /* --- Animation Classes (Apply via JS or manually) --- */
+  
+  /* Class to apply to hero content for initial load animation */
+  .hero-content {
+      animation: fadeInUp 1s 0.3s ease-out forwards; /* Added slight delay */
+      opacity: 0; /* Start hidden */
+  }
+  
+  
+  /* Generic class for triggering animations on scroll */
+  .animate-on-scroll {
+      opacity: 0; /* Start hidden before animation triggers */
+  }
+  
+  /* Specific section animations triggered by JS adding 'animate-on-scroll' + specific keyframe name */
+  
+  .features .feature-card.animate-on-scroll {
+      animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  /* Add staggered delays for feature cards if desired (using JS might be easier) */
+  /* Example if doing via CSS only - requires unique classes/IDs or nth-child */
+  .features .feature-card:nth-child(1).animate-on-scroll { animation-delay: 0.1s; }
+  .features .feature-card:nth-child(2).animate-on-scroll { animation-delay: 0.2s; }
+  .features .feature-card:nth-child(3).animate-on-scroll { animation-delay: 0.3s; }
+  .features .feature-card:nth-child(4).animate-on-scroll { animation-delay: 0.4s; }
+  
+  
+  .testimonials .section-title.animate-on-scroll {
+      animation: fadeIn 1s ease-out forwards;
+  }
+  
+  /* Testimonial content fade is handled by adding 'active' class in style.css */
+  
+  
+  /* Add other animations as needed for other sections */
+  /*
+  .some-other-element.animate-on-scroll {
+      animation: slideInLeft 0.8s ease-out forwards;
+  }
+  */
+/* BASE VALUE CARD STYLING */
+.value-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: scaleFadeIn 0.6s ease forwards;
+    outline: none;
+    border: none;
+  }
+  
+  /* Remove blue outline and focus styles */
+  .value-card:focus,
+  .value-card:active {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  /* Staggered entrance animation */
+  .value-card:nth-child(1) { animation-delay: 0.2s; }
+  .value-card:nth-child(2) { animation-delay: 0.4s; }
+  .value-card:nth-child(3) { animation-delay: 0.6s; }
+  .value-card:nth-child(4) { animation-delay: 0.8s; }
+  
+  /* CARD HOVER EFFECT — stronger upward lift + deeper shadow */
+  .value-card:hover {
+    transform: translateY(-18px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* ICON CIRCLE BASE STYLING */
+  .value-icon {
+    background-color: #007bff;
+    color: white;
+    font-size: 24px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  /* ICON TILT RIGHT ON HOVER */
+  .value-card:hover .value-icon {
+    transform: rotate(10deg) scale(1.05);
+  }
+  
+  /* ANIMATION KEYFRAMES */
+  @keyframes scaleFadeIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  

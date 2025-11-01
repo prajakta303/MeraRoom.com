@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Accommodation | MeraRoom.com</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+   <!-- EXAMPLE: Modification within the <header> of any page -->
+<!-- EXAMPLE: Updated structure inside header of ANY page -->
+<header class="header">
+    <div class="container">
+        <!-- Logo stays the same -->
+         <div class="logo">
+            <h1><a href="index.html">MeraRoom.com</a></h1>
+             <p class="bold-black">Find your home away from home</p>
+        </div>
+
+        <!-- **** START NEW WRAPPER **** -->
+         <div class="nav-profile-wrapper">
+             <!-- Navigation -->
+            <nav class="navbar">
+                 <ul>
+                    <li><a href="index.html" id="nav-home-link">Home</a></li>
+                    <li><a href="listings.html" id="nav-find-link">Find Accommodation</a></li>
+                    <li id="nav-seeker-register-link"><a href="register.html">Register as Seeker</a></li>
+                    <li id="nav-owner-register-link"><a href="owner-register.html">Register as Owner</a></li>
+                     <li><a href="about.html" id="nav-about-link">About Us</a></li>
+                    <li id="nav-login-link"><a href="login.html">Login</a></li>
+                    <li id="nav-profile-link" style="display: none;"><a href="#">My Profile/Dashboard</a></li>
+                     <li id="nav-logout-link" style="display: none;"><a href="#" >Logout</a></li>
+                </ul>
+             </nav>
+
+            <!-- Profile Section Placeholder -->
+             <div class="profile-section" id="profile-section-placeholder" style="display: none;">
+                 <!-- Profile Icon & Dropdown added here by main.js when logged in -->
+             </div>
+         </div>
+        <!-- **** END NEW WRAPPER **** -->
+
+        <!-- Mobile menu button stays outside the wrapper -->
+         <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+    <!-- Listings Search Section -->
+    <section class="listings-search">
+        <div class="container">
+            <h1 class="section-title">Find Your Perfect Accommodation</h1>
+            <p class="subtitle">Browse through hundreds of verified listings to find your ideal home</p>
+            
+            <div class="search-box">
+                <form id="searchForm">
+                    <div class="search-row">
+                        <div class="search-group">
+                            <label for="location"><i class="fas fa-map-marker-alt"></i> Location</label>
+                            <input type="text" id="location" placeholder="Enter city or area">
+                        </div>
+                        <div class="search-group">
+                            <label for="accommodationType"><i class="fas fa-home"></i> Type</label>
+                            <select id="accommodationType">
+                                <option value="">Any Type</option>
+                                <option value="hostel">Hostel</option>
+                                <option value="pg">PG</option>
+                                <option value="flat">Flat</option>
+                                <option value="room">Room</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="search-row">
+                        <div class="search-group">
+                            <label for="budget"><i class="fas fa-rupee-sign"></i> Budget (per month)</label>
+                            <select id="budget">
+                                <option value="">Any Budget</option>
+                                <option value="0-5000">Under ₹5,000</option>
+                                <option value="5000-10000">₹5,000 - ₹10,000</option>
+                                <option value="10000-15000">₹10,000 - ₹15,000</option>
+                                <option value="15000-20000">₹15,000 - ₹20,000</option>
+                                <option value="20000+">₹20,000+</option>
+                            </select>
+                        </div>
+                        <div class="search-group">
+                            <label for="roommatePreferences"><i class="fas fa-users"></i> Roommate Preferences</label>
+                            <select id="roommatePreferences">
+                                <option value="">No Preference</option>
+                                <option value="student">Students Only</option>
+                                <option value="working">Working Professionals</option>
+                                <option value="female">Female Only</option>
+                                <option value="male">Male Only</option>
+                                <option value="upsc">UPSC Aspirants</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Listings Results -->
+    <section class="listings-results">
+        <div class="container">
+            <div class="results-header">
+                <h2>Available Accommodations</h2>
+                <div class="sort-options">
+                    <span>Sort by:</span>
+                    <select id="sortBy">
+                        <option value="recommended">Recommended</option>
+                        <option value="price-low">Price (Low to High)</option>
+                        <option value="price-high">Price (High to Low)</option>
+                        <option value="rating">Rating</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="listings-grid" id="listingsContainer">
+                <!-- Listings will be loaded here via JavaScript -->
+            </div>
+            
+            <div class="pagination">
+                <button class="btn btn-secondary" id="prevPage"><i class="fas fa-chevron-left"></i> Previous</button>
+                <span id="pageInfo">Page 1 of 5</span>
+                <button class="btn btn-secondary" id="nextPage">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roommate Matching Info -->
+    <section class="roommate-matching-info">
+        <div class="container">
+            <div class="info-content">
+                <h2>Our Unique Roommate Matching Feature</h2>
+                <p>When you select a specific room, you'll see information about your potential roommate(s) - their habits, preferences, and lifestyle - helping you make an informed decision about your living situation.</p>
+                <p>We never share personal contact information until both parties agree to connect, ensuring your privacy and safety.</p>
+                 <button id="defineStandardsBtn" class="btn btn-primary" style="padding: 12px 30px; font-size: 1.1rem;">Define my living standards</button>
+            </div>
+            <div class="info-image">
+                <img src="images/roommate-matching.png" alt="Roommate Matching">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MeraRoom.com</h3>
+                    <p>Making your search for the perfect room and roommate easier, safer, and more personal.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Find Accommodation</a></li>
+                        <li><a href="register.html">Register as Seeker</a></li>
+                        <li><a href="owner-register.html">Register as Owner</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> hello@meraroom.com</li>
+                        <li><i class="fas fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Housing Street, Mumbai, India</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new listings and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MeraRoom.com. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/listings.js"></script>
+</body>
+</html>

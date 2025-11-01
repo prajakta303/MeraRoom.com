@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Owner Dashboard | MeraRoom.com</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+    <!-- Header -->
+<!-- EXAMPLE: Modification within the <header> of any page -->
+<!-- EXAMPLE: Updated structure inside header of ANY page -->
+<header class="header">
+    <div class="container">
+        <!-- Logo stays the same -->
+         <div class="logo">
+            <h1><a href="index.html">MeraRoom.com</a></h1>
+             <p class="bold-black">Find your home away from home</p>
+        </div>
+
+        <!-- **** START NEW WRAPPER **** -->
+         <div class="nav-profile-wrapper">
+             <!-- Navigation -->
+            <nav class="navbar">
+                 <ul>
+                    <li><a href="index.html" id="nav-home-link">Home</a></li>
+                    <li><a href="listings.html" id="nav-find-link">Find Accommodation</a></li>
+                    <li id="nav-seeker-register-link"><a href="register.html">Register as Seeker</a></li>
+                    <li id="nav-owner-register-link"><a href="owner-register.html">Register as Owner</a></li>
+                     <li><a href="about.html" id="nav-about-link">About Us</a></li>
+                    <li id="nav-login-link"><a href="login.html">Login</a></li>
+                    <li id="nav-profile-link" style="display: none;"><a href="#">My Profile/Dashboard</a></li>
+                     <li id="nav-logout-link" style="display: none;"><a href="#" >Logout</a></li>
+                </ul>
+             </nav>
+
+            <!-- Profile Section Placeholder -->
+             <div class="profile-section" id="profile-section-placeholder" style="display: none;">
+                 <!-- Profile Icon & Dropdown added here by main.js when logged in -->
+             </div>
+         </div>
+        <!-- **** END NEW WRAPPER **** -->
+
+        <!-- Mobile menu button stays outside the wrapper -->
+         <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+    <!-- Main Content -->
+    <main class="dashboard-page-container">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>Owner Dashboard</h1>
+                <p class="welcome-message">Welcome, Owner <strong id="user-name">Raj deokar!</strong></p>
+                <div class="dashboard-actions">
+                    <a href="#" id="edit-profile-btn" class="btn btn-secondary">Edit Profile</a>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+
+                <!-- Column 1: Owner Info -->
+                <div class="owner-info-column">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <i class="fas fa-user-tie"></i>
+                            <h3>Your Information</h3>
+                        </div>
+                        <div class="card-content" id="owner-info-content">
+                            <p><strong>Name:</strong> Raj deokar</p>
+                            <p><strong>Email:</strong> rajvardhandeokar@gmail.com</p>
+                            <p><strong>Phone:</strong> 7841991191</p>
+                            <p><strong>Address:</strong> Hadapsar, Pune</p>
+                            <p><strong>ID Proof:</strong> On File</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2: Property Management -->
+                <div class="property-management-column">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <i class="fas fa-home"></i>
+                            <h3>My Properties</h3>
+                        </div>
+                        <div class="card-content">
+                            <a href="owner-register.html" class="btn btn-primary" style="margin-bottom: 20px;">List New Property</a>
+                            <div id="owner-properties-list">
+
+                                <div class="property-item">
+                                    <div>
+                                        <h4>Swanand Apartment</h4>
+                                        <p>Pune - Flat</p>
+                                    </div>
+                                    <div class="property-actions">
+                                        <button class="btn btn-secondary">Edit</button>
+                                        <button class="btn btn-secondary" style="background-color:#f44336;">Delete</button>
+                                    </div>
+                                </div>
+
+                                <!-- More properties can be dynamically injected here -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /dashboard-grid -->
+        </div><!-- /container -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© <span id="current-year-footer"></span> MeraRoom.com</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>document.getElementById('current-year-footer').textContent = new Date().getFullYear();</script>
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/login.js"></script>
+
+</body>
+</html>

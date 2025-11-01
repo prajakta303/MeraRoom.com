@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register as Seeker | MeraRoom.com</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <!-- EXAMPLE: Modification within the <header> of any page -->
+<!-- EXAMPLE: Updated structure inside header of ANY page -->
+<header class="header">
+    <div class="container">
+        <!-- Logo stays the same -->
+         <div class="logo">
+            <h1><a href="index.html">MeraRoom.com</a></h1>
+             <p class="bold-black">Find your home away from home</p>
+        </div>
+
+        <!-- **** START NEW WRAPPER **** -->
+         <div class="nav-profile-wrapper">
+             <!-- Navigation -->
+            <nav class="navbar">
+                 <ul>
+                    <li><a href="index.html" id="nav-home-link">Home</a></li>
+                    <li><a href="listings.html" id="nav-find-link">Find Accommodation</a></li>
+                    <li id="nav-seeker-register-link"><a href="register.html">Register as Seeker</a></li>
+                    <li id="nav-owner-register-link"><a href="owner-register.html">Register as Owner</a></li>
+                     <li><a href="about.html" id="nav-about-link">About Us</a></li>
+                    <li id="nav-login-link"><a href="login.html">Login</a></li>
+                    <li id="nav-profile-link" style="display: none;"><a href="#">My Profile/Dashboard</a></li>
+                     <li id="nav-logout-link" style="display: none;"><a href="#" >Logout</a></li>
+                </ul>
+             </nav>
+
+            <!-- Profile Section Placeholder -->
+             <div class="profile-section" id="profile-section-placeholder" style="display: none;">
+                 <!-- Profile Icon & Dropdown added here by main.js when logged in -->
+             </div>
+         </div>
+        <!-- **** END NEW WRAPPER **** -->
+
+        <!-- Mobile menu button stays outside the wrapper -->
+         <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+    <!-- Registration Section -->
+    <section class="registration">
+        <div class="container">
+            <div class="registration-container">
+                <div class="registration-info">
+                    <h2>Find Your Perfect Roommate</h2>
+                    <p>Join thousands of students and professionals who found not just a room, but a home that matches their personality.</p>
+                    <div class="features-list">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Verified accommodations</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Compatibility matching</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Scholarship discounts</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Safe & secure platform</span>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"MeraRoom helped me find roommates who became my closest friends in a new city. The matching system really works!"</p>
+                        <div class="author">
+                            <img src="images/testimonial4.jpg" alt="Neha">
+                            <span>Neha, Mumbai</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="registration-form">
+                    <h2>Create Your Account</h2>
+                    <p>Fill in your details to get started</p>
+                    
+                    <form id="seekerRegistrationForm">
+                        <div class="form-step active" id="step1">
+                            <h3>Basic Information</h3>
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input type="password" id="confirmPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="hometown">Hometown</label>
+                                <input type="text" id="hometown" required>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-primary next-step" data-next="step2">Next</button>
+                            </div>
+                            <div class="profile-meter">
+                                <p>Profile Strength: <span id="strength-value">0%</span></p>
+                                <div class="meter-bar"><div id="meter-fill" style="width:0%"></div></div>
+                              </div>
+                        </div>
+                        
+                        <div class="form-step" id="step2">
+                            <h3>Education/Work Details</h3>
+                            <div class="form-group">
+                                <label>You are a</label>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="userType" value="student" checked>
+                                        <span>Student</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="userType" value="working">
+                                        <span>Working Professional</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group" id="collegeGroup">
+                                <label for="college">College/University</label>
+                                <input type="text" id="college">
+                            </div>
+                            <div class="form-group" id="courseGroup">
+                                <label for="course">Course</label>
+                                <input type="text" id="course">
+                            </div>
+                            <div class="form-group" id="workGroup" style="display: none;">
+                                <label for="company">Company</label>
+                                <input type="text" id="company">
+                            </div>
+                            <div class="form-group" id="designationGroup" style="display: none;">
+                                <label for="designation">Designation</label>
+                                <input type="text" id="designation">
+                            </div>
+                            <div class="form-group" id="scholarshipGroup">
+                                <label for="scholarship">Scholarship Certificate (if any, for discount)</label>
+                                <input type="file" id="scholarship">
+                            </div>
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-secondary prev-step" data-prev="step1">Previous</button>
+                                <button type="button" class="btn btn-primary next-step" data-next="step3">Next</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-step" id="step3">
+                            <h3>Family Contact</h3>
+                            <div class="form-group">
+                                <label for="fatherName">Father's Name</label>
+                                <input type="text" id="fatherName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="fatherContact">Father's Contact Number</label>
+                                <input type="tel" id="fatherContact" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="motherName">Mother's Name</label>
+                                <input type="text" id="motherName">
+                            </div>
+                            <div class="form-group">
+                                <label for="motherContact">Mother's Contact Number</label>
+                                <input type="tel" id="motherContact">
+                            </div>
+                            <div class="form-group">
+                                <label for="emergencyContact">Emergency Contact (Other)</label>
+                                <input type="tel" id="emergencyContact">
+                            </div>
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-secondary prev-step" data-prev="step2">Previous</button>
+                                <button type="button" class="btn btn-primary next-step" data-next="step4">Next</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-step" id="step4">
+                            <h3>Roommate Preferences</h3>
+                            <div class="form-group">
+                                <label for="accommodationType">Preferred Accommodation Type</label>
+                                <select id="accommodationType">
+                                    <option value="any">Any Type</option>
+                                    <option value="hostel">Hostel</option>
+                                    <option value="pg">PG</option>
+                                    <option value="flat">Flat</option>
+                                    <option value="room">Room</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="budget">Budget Range (per month)</label>
+                                <select id="budget">
+                                    <option value="0-5000">Under ₹5,000</option>
+                                    <option value="5000-10000">₹5,000 - ₹10,000</option>
+                                    <option value="10000-15000" selected>₹10,000 - ₹15,000</option>
+                                    <option value="15000-20000">₹15,000 - ₹20,000</option>
+                                    <option value="20000+">₹20,000+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Preferred Roommate Gender</label>
+                                <div class="radio-group">
+                                    <label>
+                                        <input type="radio" name="preferredGender" value="male">
+                                        <span>Male</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="preferredGender" value="female">
+                                        <span>Female</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio" name="preferredGender" value="any" checked>
+                                        <span>No Preference</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="hobbies">Your Hobbies/Interests</label>
+                                <textarea id="hobbies" placeholder="e.g. Reading, Sports, Music, etc."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="habits">Your Habits/Lifestyle</label>
+                                <textarea id="habits" placeholder="e.g. Early riser, Night owl, Clean, Social, etc."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="restrictions">Any Restrictions for Roommate</label>
+                                <textarea id="restrictions" placeholder="e.g. No smoking, Vegetarian only, Quiet hours, etc."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="specialReq">Special Requirements (if any)</label>
+                                <textarea id="specialReq" placeholder="e.g. Need wheelchair access, Pet friendly, etc."></textarea>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-secondary prev-step" data-prev="step3">Previous</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Register Section -->
+    <section class="why-register">
+        <div class="container">
+            <h2 class="section-title">Why Register With Us?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Verified Profiles</h3>
+                    <p>All roommates and owners are verified with multiple checks for your safety.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Compatibility Matching</h3>
+                    <p>Our algorithm matches you with roommates who share similar habits and lifestyles.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>Exclusive Discounts</h3>
+                    <p>Special rates for students and scholarship holders at partnered accommodations.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our team is always available to help with any issues or concerns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MeraRoom.com</h3>
+                    <p>Making your search for the perfect room and roommate easier, safer, and more personal.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Find Accommodation</a></li>
+                        <li><a href="register.html">Register as Seeker</a></li>
+                        <li><a href="owner-register.html">Register as Owner</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> hello@meraroom.com</li>
+                        <li><i class="fas fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Housing Street, Mumbai, India</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new listings and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MeraRoom.com. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/register.js"></script>
+</body>
+<html>

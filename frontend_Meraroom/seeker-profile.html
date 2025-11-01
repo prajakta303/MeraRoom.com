@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | MeraRoom.com</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* You should move these profile-specific styles to style.css for better organization */
+        .profile-page-container {
+            padding-top: 120px; /* Adjust based on your fixed header height */
+            padding-bottom: 60px;
+        }
+        .profile-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .profile-header h1 {
+            font-size: 2.5rem;
+            color: var(--text-dark); /* Assuming you have these CSS variables */
+            margin-bottom: 10px;
+        }
+        .welcome-message {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        .profile-actions {
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .profile-card {
+            background-color: var(--bg-white); /* Assuming --bg-white is defined */
+            border-radius: 8px;
+            box-shadow: var(--shadow-light); /* Assuming --shadow-light is defined */
+            overflow: hidden; /* If card-header has a different background */
+        }
+        .profile-card .card-header {
+            background-color: var(--bg-light); /* Assuming --bg-light */
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border-color); /* Assuming --border-color */
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        .profile-card .card-header i {
+            margin-right: 10px;
+            color: var(--primary-blue); /* Your theme blue */
+        }
+        .profile-card .card-content {
+            padding: 20px;
+            text-align: left;
+        }
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        .info-label {
+            font-weight: 600;
+            color: #555;
+            margin-right: 10px;
+        }
+        .info-value {
+            color: #333;
+            text-align: right;
+        }
+        .profile-card ul {
+            list-style-type: none; /* Remove default bullets */
+            padding-left: 0;
+        }
+        .profile-card ul li {
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        /* Styles for profile-content from your original HTML for this page - can be removed if covered by .profile-page-container */
+        .profile-content {
+            padding: 150px 0 80px; /* This seems very large if header is fixed. Adjust or use .profile-page-container's padding */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html">MeraRoom.com</a></h1>
+                <p>Find your home away from home</p> <!-- Removed class="bold-black" if styled by CSS -->
+            </div>
+            <div class="nav-profile-wrapper">
+                <nav class="navbar">
+                     <ul>
+                        <li><a href="index.html" id="nav-home-link">Home</a></li>
+                        <li><a href="listings.html" id="nav-find-link">Find Accommodation</a></li>
+                        <li id="nav-seeker-register-link"><a href="register.html">Register as Seeker</a></li>
+                        <li id="nav-owner-register-link"><a href="owner-register.html">Register as Owner</a></li>
+                        <li><a href="about.html" id="nav-about-link">About Us</a></li>
+                        <li id="nav-login-link"><a href="login.html">Login</a></li>
+                        <!-- Profile & Logout Links below are handled by main.js based on login state -->
+                    </ul>
+                </nav>
+                <div class="profile-section" id="profile-section-placeholder" style="display: none;">
+                     <!-- Profile Icon & Dropdown added here by main.js when logged in -->
+                </div>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="profile-page-container">
+        <div class="container">
+            <div class="profile-header">
+                <h1>Seeker's Profile</h1>
+                <p class="welcome-message">Welcome, <strong id="user-name">User</strong>!</p>
+                <div class="profile-actions">
+                    <a href="edit-seeker-profile.html" id="edit-profile-btn" class="btn btn-secondary">Edit My Profile</a>
+                    <a href="preferences.html" class="btn btn-primary">Update My Living Standards</a>
+                </div>
+            </div>
+
+            <div class="profile-grid">
+                <!-- Basic Info Card -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <i class="fas fa-user"></i><h2>Basic Information</h2>
+                    </div>
+                    <div class="card-content" id="basic-info-content">
+                        <p>Loading...</p> <!-- Will be replaced by JS -->
+                    </div>
+                </div>
+
+                <!-- Text-Based Registration Preferences Card -->
+                <div class="profile-card">
+                    <div class="card-header">
+                         <i class="fas fa-clipboard-list"></i><h2>Registration Preferences</h2> <!-- Renamed title -->
+                    </div>
+                    <div class="card-content" id="preferences-content"> <!-- Used by profile.js -->
+                        <p>Loading...</p>
+                    </div>
+                 </div>
+
+                <!-- Icon-Based Living Standards Card (NEW) -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <i class="fas fa-feather-alt"></i><h2>My Living Standards</h2>
+                    </div>
+                    <div class="card-content" id="living-standards-display"> <!-- NEW ID for JS -->
+                        <p>Loading...</p>
+                    </div>
+                </div>
+
+                <!-- Additional Things Card (NEW) -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <i class="fas fa-info-circle"></i><h2>Additional Things</h2>
+                    </div>
+                    <div class="card-content" id="additional-info-display"> <!-- NEW ID for JS -->
+                        <p>Loading...</p>
+                    </div>
+                </div>
+
+                <!-- Contact/Other Card -->
+                <div class="profile-card">
+                    <div class="card-header">
+                        <i class="fas fa-address-book"></i><h2>Contact & Details</h2>
+                    </div>
+                    <div class="card-content" id="contact-details-content">
+                         <p>Loading...</p> <!-- Will be replaced by JS -->
+                    </div>
+                </div>
+
+            </div><!-- /profile-grid -->
+        </div><!-- /container -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+           <!-- ... (Your full footer code from other pages) ... -->
+           <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MeraRoom.com</h3>
+                    <p>Making your search for the perfect room and roommate easier, safer, and more personal.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Find Accommodation</a></li>
+                        <li><a href="register.html">Register as Seeker</a></li>
+                        <li><a href="owner-register.html">Register as Owner</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> hello@meraroom.com</li>
+                        <li><i class="fas fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Housing Street, Mumbai, India</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new listings and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email" aria-label="Email for Newsletter"/>
+                        <button type="submit" aria-label="Subscribe to Newsletter"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+               <p>© <span id="current-year-footer"></span> MeraRoom.com. All rights reserved.</p>
+               <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+               </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const currentYearElement = document.getElementById('current-year-footer');
+        if (currentYearElement) {
+            currentYearElement.textContent = new Date().getFullYear();
+        }
+    </script>
+    <script src="js/main.js"></script>
+    <script src="js/profile.js"></script>
+    <!-- <script src="js/login.js"></script> Removed login.js - it's for login.html only -->
+</body>
+</html>

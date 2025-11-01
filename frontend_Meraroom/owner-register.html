@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register as Owner | MeraRoom.com</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+   <!-- EXAMPLE: Modification within the <header> of any page -->
+<!-- EXAMPLE: Updated structure inside header of ANY page -->
+<header class="header">
+    <div class="container">
+        <!-- Logo stays the same -->
+         <div class="logo">
+            <h1><a href="index.html">MeraRoom.com</a></h1>
+             <p class="bold-black">Find your home away from home</p>
+        </div>
+
+        <!-- **** START NEW WRAPPER **** -->
+         <div class="nav-profile-wrapper">
+             <!-- Navigation -->
+            <nav class="navbar">
+                 <ul>
+                    <li><a href="index.html" id="nav-home-link">Home</a></li>
+                    <li><a href="listings.html" id="nav-find-link">Find Accommodation</a></li>
+                    <li id="nav-seeker-register-link"><a href="register.html">Register as Seeker</a></li>
+                    <li id="nav-owner-register-link"><a href="owner-register.html">Register as Owner</a></li>
+                     <li><a href="about.html" id="nav-about-link">About Us</a></li>
+                    <li id="nav-login-link"><a href="login.html">Login</a></li>
+                    <li id="nav-profile-link" style="display: none;"><a href="#">My Profile/Dashboard</a></li>
+                     <li id="nav-logout-link" style="display: none;"><a href="#" >Logout</a></li>
+                </ul>
+             </nav>
+
+            <!-- Profile Section Placeholder -->
+             <div class="profile-section" id="profile-section-placeholder" style="display: none;">
+                 <!-- Profile Icon & Dropdown added here by main.js when logged in -->
+             </div>
+         </div>
+        <!-- **** END NEW WRAPPER **** -->
+
+        <!-- Mobile menu button stays outside the wrapper -->
+         <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+    <!-- Owner Registration Section -->
+    <section class="owner-registration">
+        <div class="container">
+            <div class="registration-container">
+                <div class="registration-info">
+                    <h2>List Your Property With Us</h2>
+                    <p>Join India's most trusted accommodation platform and connect with thousands of verified students and professionals.</p>
+                    <div class="features-list">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Verified tenant profiles</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>No brokerage fees</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Secure online payments</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>24/7 support</span>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Since listing my PG on MeraRoom, I've had 100% occupancy with quality tenants. The platform saves me so much time and hassle!"</p>
+                        <div class="author">
+                            <img src="images/testimonial5.jpg" alt="Mr. Kapoor">
+                            <span>Mr. Kapoor, Delhi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="registration-form">
+                    <h2>Owner Registration</h2>
+                    <p>Fill in your details to list your property</p>
+                    
+                    <form id="ownerRegistrationForm">
+                        <div class="form-step active" id="ownerStep1">
+                            <h3>Owner Information</h3>
+                            <div class="form-group">
+                                <label for="ownerName">Full Name</label>
+                                <input type="text" id="ownerName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ownerEmail">Email</label>
+                                <input type="email" id="ownerEmail" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ownerPhone">Phone Number</label>
+                                <input type="tel" id="ownerPhone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ownerPassword">Password</label>
+                                <input type="password" id="ownerPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ownerConfirmPassword">Confirm Password</label>
+                                <input type="password" id="ownerConfirmPassword" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ownerAddress">Permanent Address</label>
+                                <textarea id="ownerAddress" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="ownerIDProof">ID Proof (Aadhar/PAN)</label>
+                                <input type="file" id="ownerIDProof" required>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-primary next-step" data-next="ownerStep2">Next</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-step" id="ownerStep2">
+                            <h3>Property Information</h3>
+                            <div class="form-group">
+                                <label for="propertyType">Property Type</label>
+                                <select id="propertyType" required>
+                                    <option value="">Select Type</option>
+                                    <option value="hostel">Hostel</option>
+                                    <option value="pg">PG</option>
+                                    <option value="flat">Flat</option>
+                                    <option value="house">House</option>
+                                    <option value="room">Room</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="propertyName">Property Name (if any)</label>
+                                <input type="text" id="propertyName">
+                            </div>
+                            <div class="form-group">
+                                <label for="propertyAddress">Full Property Address</label>
+                                <textarea id="propertyAddress" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="propertyCity">City</label>
+                                <input type="text" id="propertyCity" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="propertyLandmark">Nearest Landmark</label>
+                                <input type="text" id="propertyLandmark" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="totalRooms">Total Rooms Available</label>
+                                <input type="number" id="totalRooms" min="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="currentOccupancy">Current Occupancy</label>
+                                <input type="number" id="currentOccupancy" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="propertyPhotos">Property Photos</label>
+                                <input type="file" id="propertyPhotos" multiple required>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-secondary prev-step" data-prev="ownerStep1">Previous</button>
+                                <button type="button" class="btn btn-primary next-step" data-next="ownerStep3">Next</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-step" id="ownerStep3">
+                            <h3>Property Details</h3>
+                            <div class="form-group">
+                                <label for="propertyDescription">Property Description</label>
+                                <textarea id="propertyDescription" required placeholder="Describe your property in detail..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Amenities Available</label>
+                                <div class="checkbox-group">
+                                    <label>
+                                        <input type="checkbox" name="amenities" value="wifi">
+                                        <span>WiFi</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="amenities" value="food">
+                                        <span>Food</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="amenities" value="ac">
+                                        <span>AC</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="amenities" value="laundry">
+                                        <span>Laundry</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="amenities" value="cleaning">
+                                        <span>Cleaning</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="amenities" value="parking">
+                                        <span>Parking</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="amenities" value="powerbackup">
+                                        <span>Power Backup</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="amenities" value="security">
+                                        <span>Security</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="amenities" value="gym">
+                                        <span>Gym</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="amenities" value="tv">
+                                        <span>TV</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="nearbyFacilities">Nearby Facilities</label>
+                                <textarea id="nearbyFacilities" placeholder="e.g. Metro station 500m, Mall 1km, Hospital 2km"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="transportation">Transportation Options</label>
+                                <textarea id="transportation" placeholder="e.g. Bus stop 200m, Auto stand nearby"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="messFacility">Mess Facility</label>
+                                <select id="messFacility" required>
+                                    <option value="">Select Option</option>
+                                    <option value="included">Included in rent</option>
+                                    <option value="available">Available (extra charge)</option>
+                                    <option value="not-available">Not Available</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="startingDate">Available From</label>
+                                <input type="date" id="startingDate" required>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-secondary prev-step" data-prev="ownerStep2">Previous</button>
+                                <button type="button" class="btn btn-primary next-step" data-next="ownerStep4">Next</button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-step" id="ownerStep4">
+                            <h3>Pricing & Policies</h3>
+                            <div class="form-group">
+                                <label for="rentAmount">Rent Amount (per month)</label>
+                                <input type="number" id="rentAmount" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="securityDeposit">Security Deposit</label>
+                                <input type="number" id="securityDeposit" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="otherCharges">Other Charges (if any)</label>
+                                <input type="text" id="otherCharges" placeholder="e.g. Maintenance ₹500, Electricity extra">
+                            </div>
+                            <div class="form-group">
+                                <label for="studentDiscount">Discount for Students (if any)</label>
+                                <input type="text" id="studentDiscount" placeholder="e.g. 10% off for scholarship students">
+                            </div>
+                            <div class="form-group">
+                                <label>Preferred Tenant Type</label>
+                                <div class="checkbox-group">
+                                    <label>
+                                        <input type="checkbox" name="tenantType" value="student" checked>
+                                        <span>Students</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="tenantType" value="working">
+                                        <span>Working Professionals</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="tenantType" value="female">
+                                        <span>Female Only</span>
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="tenantType" value="male">
+                                        <span>Male Only</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="houseRules">House Rules</label>
+                                <textarea id="houseRules" placeholder="e.g. No smoking, No overnight guests, etc."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="agreementTerms">Agreement Terms</label>
+                                <select id="agreementTerms" required>
+                                    <option value="">Select Option</option>
+                                    <option value="11-months">11 Months</option>
+                                    <option value="6-months">6 Months</option>
+                                    <option value="3-months">3 Months</option>
+                                    <option value="monthly">Monthly</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" id="termsAgreement" required>
+                                    <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+                                </label>
+                            </div>
+                            <div class="form-buttons">
+                                <button type="button" class="btn btn-secondary prev-step" data-prev="ownerStep3">Previous</button>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="owner-benefits">
+        <div class="container">
+            <h2 class="section-title">Benefits for Property Owners</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Quick Listing</h3>
+                    <p>List your property in minutes and start getting inquiries immediately.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Verified Tenants</h3>
+                    <p>All tenants are verified with ID proof and background checks.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <h3>Secure Payments</h3>
+                    <p>Get rent payments directly to your bank account on time, every time.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Higher Occupancy</h3>
+                    <p>Our platform helps you maintain 90%+ occupancy year-round.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>MeraRoom.com</h3>
+                    <p>Making your search for the perfect room and roommate easier, safer, and more personal.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Find Accommodation</a></li>
+                        <li><a href="register.html">Register as Seeker</a></li>
+                        <li><a href="owner-register.html">Register as Owner</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> hello@meraroom.com</li>
+                        <li><i class="fas fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Housing Street, Mumbai, India</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get updates on new listings and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 MeraRoom.com. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/owner-register.js"></script>
+</body>
+</html>
+
+
+ 

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Preferences - MeraRoom.com</title> <!-- Update title as needed -->
+
+  <!-- Google Fonts (Assuming already linked in your main layout) -->
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> -->
+
+  <!-- Font Awesome Icons (Ensure this is linked) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+  <!-- Your Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- Include animations if needed on this page, otherwise omit -->
+  <!-- <link rel="stylesheet" href="css/animations.css"/> -->
+
+</head>
+<body>
+
+  <!-- Assuming your header might be included via template -->
+  <!-- <header class="header"> ... </header> -->
+
+  <main> <!-- Use main tag for primary content -->
+    <div class="preferences-container">
+
+      <h2 class="pref-title">Your Preferences</h2>
+      <p class="pref-subtitle">
+        This helps us understand your lifestyle. Please select at least 5 preferences that best describe you.
+      </p>
+
+      <div id="preferenceGrid" class="pref-grid">
+
+        <!-- Row 1 -->
+        <button class="pref-item" data-preference="night-owl">
+          <!-- *** REPLACE ICON PATH *** -->
+          <img src="images/icon-owl.png" alt="Night Owl" class="pref-icon">
+          <span class="pref-label">Night Owl</span>
+        </button>
+        <button class="pref-item" data-preference="early-bird">
+           <!-- *** REPLACE ICON PATH *** -->
+          <img src="images/icon-peacock.png" alt="Early Bird" class="pref-icon">
+          <span class="pref-label">Early Bird</span>
+        </button>
+        <button class="pref-item" data-preference="studious">
+           <!-- *** REPLACE ICON PATH *** -->
+          <img src="images/icon-books.png" alt="Studious" class="pref-icon">
+          <span class="pref-label">Studious</span>
+        </button>
+        <button class="pref-item" data-preference="fitness-freak">
+           <!-- *** REPLACE ICON PATH *** -->
+          <img src="images/icon-dumbbell.png" alt="Fitness Freak" class="pref-icon">
+          <span class="pref-label">Fitness Freak</span>
+        </button>
+        <button class="pref-item" data-preference="sporty">
+           <!-- *** REPLACE ICON PATH *** -->
+          <img src="images/icon-footballer.png" alt="Sporty" class="pref-icon">
+          <span class="pref-label">Sporty</span>
+        </button>
+        <button class="pref-item" data-preference="wanderer">
+           <!-- *** REPLACE ICON PATH *** -->
+          <img src="images/icon-car.png" alt="Wanderer" class="pref-icon">
+          <span class="pref-label">Wanderer</span>
+        </button>
+
+        <!-- Row 2 -->
+        <button class="pref-item" data-preference="party-lover">
+           <!-- *** REPLACE ICON PATH *** -->
+          <img src="images/icon-party-emoji.png" alt="Party Lover" class="pref-icon">
+          <span class="pref-label">Party Lover</span>
+        </button>
+        <button class="pref-item" data-preference="pet-lover">
+           <!-- *** REPLACE ICON PATH *** -->
+          <img src="images/icon-person-dog.png" alt="Pet Lover" class="pref-icon">
+          <span class="pref-label">Pet Lover</span>
+        </button>
+         <button class="pref-item" data-preference="vegan">
+           <!-- *** REPLACE ICON PATH *** -->
+          <img src="images/icon-vegan.png" alt="Vegan" class="pref-icon">
+          <span class="pref-label">Vegan</span>
+        </button>
+        <button class="pref-item" data-preference="non-alcoholic">
+           <!-- *** REPLACE ICON PATH *** -->
+          <img src="images/icon-no-alcohol.png" alt="Non Alcoholic" class="pref-icon">
+          <span class="pref-label">Non Alcoholic</span>
+        </button>
+         <button class="pref-item" data-preference="music-lover">
+           <!-- *** REPLACE ICON PATH *** -->
+          <img src="images/icon-guitarist.png" alt="Music Lover" class="pref-icon">
+          <span class="pref-label">Music Lover</span>
+        </button>
+        <button class="pref-item" data-preference="non-smoker">
+           <!-- *** REPLACE ICON PATH *** -->
+          <img src="images/icon-no-smoking.png" alt="Non Smoker" class="pref-icon">
+          <span class="pref-label">Non Smoker</span>
+        </button>
+
+        <!-- Add more preferences as needed -->
+
+      </div>
+
+      <!-- Additional Info Section -->
+      <div class="additional-info-section">
+        <label for="additionalInfo" class="additional-info-label">
+          <i class="fas fa-plus-circle additional-info-icon"></i> <!-- Font Awesome Plus Icon -->
+          Additional Things
+        </label>
+        <textarea
+          id="additionalInfo"
+          name="additional_info"
+          class="additional-info-textarea"
+          rows="4"
+          placeholder="Examples: Specific house rules, expectations about shared chores, communication style preferences, hobbies not listed above..."
+        ></textarea>
+      </div>
+      <!-- End Additional Info Section -->
+
+
+      <div class="pref-update-section">
+         <p id="prefCounterMsg" class="pref-counter-message" style="display: none;">Please select at least 5 preferences.</p>
+         <button id="updatePrefsBtn" class="btn btn-primary" disabled>Update Preferences</button>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Assuming your footer might be included via template -->
+  <!-- <footer class="footer"> ... </footer> -->
+
+  <!-- Your Main JavaScript File (Must be loaded after the HTML elements) -->
+  <script src="js/main.js"></script>
+</body>
+</html>

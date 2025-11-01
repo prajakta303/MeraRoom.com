@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MeraRoom.com - Find Your Perfect Room & Roommate</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+
+</head>
+<body>
+
+  <!-- Header -->
+  <!-- EXAMPLE: Modification within the <header> of any page -->
+<!-- EXAMPLE: Updated structure inside header of ANY page -->
+<header class="header">
+  <div class="container">
+      <!-- Logo stays the same -->
+       <div class="logo">
+          <h1><a href="index.html">MeraRoom.com</a></h1>
+           <p class="bold-black">Find your home away from home</p>
+      </div>
+
+      <!-- **** START NEW WRAPPER **** -->
+       <div class="nav-profile-wrapper">
+           <!-- Navigation -->
+          <nav class="navbar">
+               <ul>
+                  <li><a href="index.html" id="nav-home-link">Home</a></li>
+                  <li><a href="listings.html" id="nav-find-link">Find Accommodation</a></li>
+                  <li id="nav-seeker-register-link"><a href="register.html">Register as Seeker</a></li>
+                  <li id="nav-owner-register-link"><a href="owner-register.html">Register as Owner</a></li>
+                   <li><a href="about.html" id="nav-about-link">About Us</a></li>
+                  <li id="nav-login-link"><a href="login.html">Login</a></li>
+                  <li id="nav-profile-link" style="display: none;"><a href="#">My Profile/Dashboard</a></li>
+                   <li id="nav-logout-link" style="display: none;"><a href="#" >Logout</a></li>
+              </ul>
+           </nav>
+
+          <!-- Profile Section Placeholder -->
+           <div class="profile-section" id="profile-section-placeholder" style="display: none;">
+               <!-- Profile Icon & Dropdown added here by main.js when logged in -->
+           </div>
+       </div>
+      <!-- **** END NEW WRAPPER **** -->
+
+      <!-- Mobile menu button stays outside the wrapper -->
+       <div class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+      </div>
+  </div>
+</header>
+
+  <!-- Hero Section with Background Image -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Your Perfect Roommate Awaits!</h1>
+        <p>Find not just a room, but a home that matches your personality and needs.</p>
+        <div class="hero-buttons">
+          <a href="listings.html" class="btn btn-primary">Find Accommodation</a>
+          <a href="register.html" class="btn btn-secondary">Register Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features-section" class="features"> <!-- Added ID for potential JS targeting -->
+    <div class="container">
+      <h2 class="section-title">Why Choose MeraRoom?</h2>
+      <div class="features-grid">
+        <!-- Add "feature-card" class for JS animation targeting -->
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-users"></i></div>
+          <h3>Roommate Matching</h3>
+          <p>Find compatible roommates based on personality, habits, and preferences.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-home"></i></div>
+          <h3>Verified Listings</h3>
+          <p>All accommodations are verified for authenticity and quality.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Safe & Secure</h3>
+          <p>Your safety is our priority with verified personal information.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-rupee-sign"></i></div>
+          <h3>Scholarship Discounts</h3>
+          <p>Special discounts for students with scholarships.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials"> <!-- Add ID for potential JS targeting -->
+    <div class="container">
+      <h2 class="section-title">Stories That Warm Our Hearts</h2>
+      <div class="testimonial-slider"> <!-- Add ID or class for JS slider control -->
+        <!-- "active" class will be managed by JS -->
+        <div class="testimonial active">
+          <p>"MeraRoom helped me find not just a place to stay, but friends who became family in a new city."</p>
+          <div class="testimonial-author">
+            <!-- *** IMPORTANT: Replace with your actual image path *** -->
+            <img src="images/testimonial1.jpg" alt="Rahul"/>
+            <h4>Rahul, Delhi</h4>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p>"As a working professional, I found the perfect flatmate who matches my schedule and lifestyle."</p>
+          <div class="testimonial-author">
+            <!-- *** IMPORTANT: Replace with your actual image path *** -->
+            <img src="images/testimonial2.jpg" alt="Priya"/>
+            <h4>Priya, Bangalore</h4>
+          </div>
+        </div>
+        <div class="testimonial">
+          <p>"The roommate matching feature is amazing! I found fellow UPSC aspirants to share my journey with."</p>
+          <div class="testimonial-author">
+             <!-- *** IMPORTANT: Replace with your actual image path *** -->
+            <img src="images/testimonial3.jpg" alt="Amit"/>
+            <h4>Amit, Jaipur</h4>
+          </div>
+        </div>
+      </div>
+       <!-- Optional: Add slider controls (dots/arrows) here -->
+       <!-- <div class="slider-controls">
+         <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+         <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+       </div> -->
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Find Your New Home?</h2>
+      <p>Join thousands of students and professionals who found their perfect living space.</p>
+      <div class="cta-buttons">
+        <a href="register.html" class="btn btn-primary">Get Started</a>
+        <a href="listings.html" class="btn btn-secondary">Browse Listings</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>MeraRoom.com</h3>
+          <p>Making your search for the perfect room and roommate easier, safer, and more personal.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="listings.html">Find Accommodation</a></li>
+            <li><a href="register.html">Register as Seeker</a></li>
+            <li><a href="owner-register.html">Register as Owner</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <ul>
+            <li><i class="fas fa-envelope"></i> hello@meraroom.com</li>
+            <li><i class="fas fa-phone"></i> +91 9876543210</li>
+            <li><i class="fas fa-map-marker-alt"></i> 123 Housing Street, Mumbai, India</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Newsletter</h3>
+          <p>Subscribe to get updates on new listings and offers.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your Email" required aria-label="Email for Newsletter"/>
+            <button type="submit" aria-label="Subscribe to Newsletter"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2023 MeraRoom.com. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript (Keep this at the bottom) -->
+  <script src="js/main.js"></script>
+</body>
+</html>

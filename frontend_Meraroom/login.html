@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | MeraRoom.com</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link to your existing stylesheet -->
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Basic styles for the login form - add to or adjust in style.css if preferred */
+        .login-section {
+            padding: 150px 0 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 200px); /* Adjust based on header/footer height */
+        }
+        .login-box {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+        .login-box h2 {
+            margin-bottom: 25px;
+            color: var(--dark-color);
+        }
+        .login-box .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+         .login-box .form-group label {
+             display: block;
+             margin-bottom: 8px;
+             font-weight: 600;
+         }
+         .login-box .form-group input {
+             width: 100%;
+             padding: 12px 15px;
+             border: 1px solid #ddd;
+             border-radius: 5px;
+         }
+         .login-box .btn {
+             width: 100%;
+             padding: 12px;
+             margin-top: 10px;
+         }
+         .login-links {
+             margin-top: 20px;
+             font-size: 0.9rem;
+         }
+         .login-links a {
+             color: var(--primary-color);
+             text-decoration: underline;
+             margin: 0 5px;
+         }
+          #error-message {
+             color: var(--danger-color);
+             margin-bottom: 15px;
+             font-size: 0.9rem;
+             min-height: 1.2em; /* Reserve space to prevent layout shifts */
+         }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation (Consistent with other pages) -->
+    <!-- EXAMPLE: Modification within the <header> of any page -->
+<!-- EXAMPLE: Updated structure inside header of ANY page -->
+<header class="header">
+    <div class="container">
+        <!-- Logo stays the same -->
+         <div class="logo">
+            <h1><a href="index.html">MeraRoom.com</a></h1>
+             <p class="bold-black">Find your home away from home</p>
+        </div>
+
+        <!-- **** START NEW WRAPPER **** -->
+         <div class="nav-profile-wrapper">
+             <!-- Navigation -->
+            <nav class="navbar">
+                 <ul>
+                    <li><a href="index.html" id="nav-home-link">Home</a></li>
+                    <li><a href="listings.html" id="nav-find-link">Find Accommodation</a></li>
+                    <li id="nav-seeker-register-link"><a href="register.html">Register as Seeker</a></li>
+                    <li id="nav-owner-register-link"><a href="owner-register.html">Register as Owner</a></li>
+                     <li><a href="about.html" id="nav-about-link">About Us</a></li>
+                    <li id="nav-login-link"><a href="login.html">Login</a></li>
+                    <li id="nav-profile-link" style="display: none;"><a href="#">My Profile/Dashboard</a></li>
+                     <li id="nav-logout-link" style="display: none;"><a href="#" >Logout</a></li>
+                </ul>
+             </nav>
+
+            <!-- Profile Section Placeholder -->
+             <div class="profile-section" id="profile-section-placeholder" style="display: none;">
+                 <!-- Profile Icon & Dropdown added here by main.js when logged in -->
+             </div>
+         </div>
+        <!-- **** END NEW WRAPPER **** -->
+
+        <!-- Mobile menu button stays outside the wrapper -->
+         <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+    <!-- Login Section -->
+    <section class="login-section">
+        <div class="container">
+            <div class="login-box">
+                <h2>Login to Your Account</h2>
+                <form id="loginForm">
+                     <div id="error-message"></div> <!-- Area to display login errors -->
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required autocomplete="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" required autocomplete="current-password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+                 <div class="login-links">
+                     <!-- Optional: Forgot Password Link -->
+                     <!-- <a href="#">Forgot Password?</a> | -->
+                     <span>Don't have an account?</span> <a href="register.html">Register</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Consistent with other pages) -->
+     <footer class="footer">
+         <div class="container">
+            <div class="footer-grid">
+                <!-- Footer Col 1 -->
+                <div class="footer-col">
+                     <h3>MeraRoom.com</h3>
+                     <p>Making your search simpler, safer, and personal.</p>
+                     <div class="social-links">
+                         <a href="#"><i class="fab fa-facebook-f"></i></a>
+                         <a href="#"><i class="fab fa-twitter"></i></a>
+                         <a href="#"><i class="fab fa-instagram"></i></a>
+                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                     </div>
+                 </div>
+                <!-- Footer Col 2 -->
+                 <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="listings.html">Find Accommodation</a></li>
+                        <li><a href="register.html">Register Seeker</a></li>
+                        <li><a href="owner-register.html">Register Owner</a></li>
+                         <li><a href="about.html">About Us</a></li>
+                         <li><a href="login.html">Login</a></li>
+                     </ul>
+                </div>
+                <!-- Footer Col 3 -->
+                 <div class="footer-col">
+                     <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> hello@meraroom.com</li>
+                        <li><i class="fas fa-phone"></i> +91 9876543210</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mumbai, India</li>
+                    </ul>
+                </div>
+                <!-- Footer Col 4 -->
+                <div class="footer-col">
+                    <h3>Newsletter</h3>
+                    <p>Updates on listings and offers.</p>
+                    <form class="newsletter-form">
+                         <input type="email" placeholder="Your Email">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+             <div class="footer-bottom">
+                <p>© <span id="current-year"></span> MeraRoom.com. All rights reserved.</p>
+                <div class="footer-links">
+                     <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+                 </div>
+             </div>
+         </div>
+    </footer>
+
+    <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
+    <script src="js/main.js"></script> <!-- Your main JS for header/footer -->
+    <script src="js/login.js"></script>   <!-- We will create this next -->
+    <script src="js/owner-register.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- accommodation-details.html (Snippet - within the accommodation info section) -->
+
+<!-- Assume you have details about the accommodation displayed above this -->
+<div class="accommodation-actions">
+    <!--
+        The data-accommodation-id and data-owner-id should be populated dynamically
+        by JavaScript when you load the accommodation details from your backend.
+        The owner ID might be part of the accommodation object if you populate it.
+    -->
+    <button
+        id="bookNowBtn"
+        class="btn btn-primary btn-book-now"
+        data-accommodation-id="YOUR_ACCOMMODATION_ID_HERE"
+        data-owner-id="THE_ACCOMMODATION_OWNER_ID_HERE"
+        style="display: none;" <!-- Initially hidden, shown by JS if user is a seeker and not owner -->
+    >
+        Book Now
+    </button>
+    <p id="bookingStatusMsg" class="booking-status-message"></p>
+</div>
+
+<!-- Add a modal for the booking message (optional) -->
+<div id="bookingMessageModal" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close-modal-btn" id="closeBookingModal">×</span>
+        <h3>Send a Message with your Booking Request (Optional)</h3>
+        <textarea id="bookingMessageTextarea" rows="4" placeholder="e.g., Tell the owner a bit about yourself..."></textarea>
+        <button id="confirmBookingBtn" class="btn btn-primary">Confirm & Send Request</button>
+    </div>
+</div>
