@@ -21,9 +21,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const listingsPerPage = 6; // Adjust as needed
     let currentPaginationData = null; // To store pagination info from API
 
-    const BASE_API_URL = 'http://localhost:5000/api/v1'; // Adjust if necessary
-    const BASE_URL_FOR_IMAGES = 'http://localhost:5000'; // Base URL where backend serves statics
-
+   const BASE_API_URL = 'https://meraroom-backend.vercel.app/api/v1';
+   const BASE_URL_FOR_IMAGES = 'https://meraroom-backend.vercel.app';
     // --- Function to Fetch Listings from API ---
     async function fetchListings() {
         console.log(`Fetching listings for page ${currentPage}`);

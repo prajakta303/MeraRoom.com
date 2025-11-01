@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
-    const BASE_API_URL = 'http://localhost:5000/api/v1'; // Ensure this matches your backend
+    const BASE_API_URL ='https://meraroom-backend.vercel.app/api/v1'; // Ensure this matches your backend
 
     loginForm.addEventListener('submit', async function(event) {
         event.preventDefault(); // Prevent default form submission reload

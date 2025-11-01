@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const prevStepButtons = ownerForm.querySelectorAll('.prev-step');
   const formSteps = ownerForm.querySelectorAll('.form-step'); // Query within the form
 
-  const BASE_API_URL = 'http://localhost:5000/api/v1'; // Adjust if necessary
+  const BASE_API_URL = 'https://meraroom-backend.vercel.app/api/v1'; // Adjust if necessary
 
   // --- Multi-step Navigation ---
   nextStepButtons.forEach(button => {

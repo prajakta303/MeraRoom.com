@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const meterFill = document.getElementById('meter-fill');
     const strengthValue = document.getElementById('strength-value');
 
-    const BASE_API_URL = 'http://localhost:5000/api/v1'; // Adjust if your backend URL is different
+    const BASE_API_URL = 'https://meraroom-backend.vercel.app/api/v1'; // Adjust if your backend URL is different
 
     // --- Multi-step form navigation logic ---
     nextStepButtons.forEach(button => {

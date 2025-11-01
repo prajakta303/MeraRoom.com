@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('profile.js: DOMContentLoaded - Script Fired.');
 
     // --- Define Backend Base URL ---
-    const BASE_API_URL = 'http://localhost:5000';
+    const BASE_API_URL = 'https://meraroom-backend.vercel.app';
 
     // --- 1. Check Login Status ---
     const token = localStorage.getItem('meraroom_token');
@@ -227,7 +227,7 @@ async function fetchAndDisplayOwnerProperties_ProfilePage(userId, token) {
         return;
     }
     propertiesListDiv.innerHTML = '<p>Loading your properties...</p>';
-    const BASE_API_URL_PROFILE = 'http://localhost:5000'; // Local constant for these functions
+    const BASE_API_URL_PROFILE = 'https://meraroom-backend.vercel.app'; // Local constant for these functions
 
     try {
         const response = await fetch(`${BASE_API_URL_PROFILE}/api/v1/accommodations/my`, {
@@ -276,8 +276,7 @@ function addPropertyActionListeners_ProfilePage(userId, token) {
         const propertyId = targetButton.getAttribute('data-id');
          if (!propertyId) return;
 
-        const BASE_API_URL_PROFILE_ACTION = 'http://localhost:5000';
-
+        const BASE_API_URL_PROFILE_ACTION ='https://meraroom-backend.vercel.app';
         if (targetButton.classList.contains('view-property-details')) {
              window.location.href = `accommodation-details.html?id=${propertyId}`;
         } else if (targetButton.classList.contains('edit-property')) {
