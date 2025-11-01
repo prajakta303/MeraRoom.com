@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log("main.js: DOMContentLoaded - Script Fired on page:", window.location.pathname);
 
     // --- Define Backend Base URL Globally for this script ---
-    const BASE_API_URL = 'https://meraroom-backend.vercel.app/api/v1'; // Ensure this matches your backend
+    const BASE_API_URL = 'https://meraroom-backend.vercel.app'; // Ensure this matches your backend
 
     // --- DOM Elements (Get elements potentially on ANY page) ---
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');

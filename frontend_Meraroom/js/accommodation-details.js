@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const confirmBookingBtn = document.getElementById('confirmBookingBtn');
     const bookingMessageTextarea = document.getElementById('bookingMessageTextarea');
 
-    const BASE_API_URL = 'https://meraroom-backend.vercel.app/api/v1'; // Ensure this matches your backend
+    const BASE_API_URL = 'https://meraroom-backend.vercel.app'; // Ensure this matches your backend
 
     // This function would be called after you fetch and display accommodation details
     async function initializeBookingButton(accommodationId, ownerId, accommodationData) {
