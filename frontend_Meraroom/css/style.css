@@ -2544,7 +2544,7 @@ h1, h3 {
 }
 .hero {
     position: relative;
-   background-image: url("https://meraroom-backend.vercel.app/uploads/Screenshot_2025-04-30_133225.png");
+   background-image: url("https://meraroom-backend.vercel.app/uploads/Screenshot%202025-04-30%20133225.png");
 
     background-repeat: no-repeat;
     background-position: center;
@@ -2832,7 +2832,7 @@ h1, h3 {
   /* --- Hero Section (Revised based on old + new styles) --- */
   .hero {
     /* *** IMPORTANT: Replace with your actual image path *** */
-    background: url("https://meraroom-backend.vercel.app/uploads/Screenshot_2025-04-30_133225.png") no-repeat center center/cover;
+    background: url("https://meraroom-backend.vercel.app/uploads/Screenshot%202025-04-30%20133225.png") no-repeat center center/cover;
 
     height: 90vh; /* Adjust height */
     display: flex;
